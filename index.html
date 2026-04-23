@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TG Graphics | Bold Posters, Covers, Logos and Video Advertising</title>
+  <meta name="description" content="TG Graphics creates bold posters, album covers, logos and advertising visuals near Makhado / Louis Trichardt, South Africa." />
+  <meta name="theme-color" content="#080a0b" />
+  <meta property="og:title" content="TG Graphics | We Make Your Brand Trend" />
+  <meta property="og:description" content="Creative design by Tiger Blesser for artists, events and businesses that want to stand out." />
+  <meta property="og:image" content="assets/logo-main.jpeg" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #080a0b;
+      --bg-soft: #101416;
+      --panel: #151a1d;
+      --panel-2: #1b2125;
+      --text: #f7f7f3;
+      --muted: #aeb8b8;
+      --line: rgba(255, 255, 255, 0.12);
+      --lime: #b6ff00;
+      --gold: #e1b75a;
+      --blue: #00a8ff;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background: var(--bg);
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(135deg, rgba(182, 255, 0, 0.08), transparent 32%),
+        linear-gradient(225deg, rgba(0, 168, 255, 0.08), transparent 38%),
+        #080a0b;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a,
+    input,
+    select,
+    textarea {
+      outline-offset: 4px;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--lime);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(8, 10, 11, 0.88);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-wrap {
+      width: min(var(--max), calc(100% - 32px));
+      min-height: 76px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.04);
+    }
+
+    .brand-text {
+      display: grid;
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .brand-text strong {
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+    }
+
+    .brand-text span {
+      color: var(--lime);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: var(--muted);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .main-nav a {
+      position: relative;
+      padding: 10px 0;
+    }
+
+    .main-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 5px;
+      height: 2px;
+      background: var(--lime);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 180ms ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      color: var(--text);
+    }
+
+    .main-nav a:hover::after,
+    .main-nav a:focus-visible::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 0 20px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #070909;
+      background: var(--lime);
+      box-shadow: 0 16px 38px rgba(182, 255, 0, 0.18);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 18px 48px rgba(182, 255, 0, 0.28);
+    }
+
+    .btn-ghost {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--line);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(182, 255, 0, 0.45);
+      background: rgba(182, 255, 0, 0.1);
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+      cursor: pointer;
+    }
+
+    .mobile-toggle span,
+    .mobile-toggle::before,
+    .mobile-toggle::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 76px);
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+      filter: saturate(1.08) contrast(1.05);
+      transform: scale(1.02);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(8, 10, 11, 0.94) 0%, rgba(8, 10, 11, 0.76) 46%, rgba(8, 10, 11, 0.22) 100%),
+        linear-gradient(0deg, #080a0b 0%, rgba(8, 10, 11, 0.2) 45%, rgba(8, 10, 11, 0.66) 100%);
+    }
+
+    .hero::after {
+      content: "TG";
+      position: absolute;
+      right: -2vw;
+      bottom: -7vw;
+      z-index: -1;
+      color: rgba(255, 255, 255, 0.035);
+      font-size: clamp(12rem, 30vw, 29rem);
+      line-height: 0.8;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 94px 0 76px;
+      display: grid;
+      grid-template-columns: minmax(0, 690px) minmax(260px, 380px);
+      align-items: end;
+      gap: 42px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 10px;
+      color: var(--lime);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 3px;
+      background: var(--lime);
+    }
+
+    .hero h1,
+    .section-title,
+    .cta h2 {
+      margin: 0;
+      text-transform: uppercase;
+      line-height: 0.86;
+      text-wrap: balance;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin-top: 20px;
+      font-size: clamp(4.4rem, 12vw, 10.8rem);
+    }
+
+    .accent {
+      color: var(--lime);
+      text-shadow: 0 0 24px rgba(182, 255, 0, 0.22);
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 24px 0 0;
+      color: rgba(247, 247, 243, 0.86);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: clamp(1rem, 2vw, 1.24rem);
+      font-weight: 650;
+      line-height: 1.55;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .hero-proof {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(15, 18, 20, 0.72);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-proof img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .hero-proof div {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      color: var(--muted);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .hero-proof strong {
+      color: var(--text);
+    }
+
+    section {
+      position: relative;
+      padding: 92px 0;
+    }
+
+    .section-wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 34px;
+    }
+
+    .section-title {
+      font-size: clamp(2.7rem, 6vw, 5.5rem);
+    }
+
+    .section-copy {
+      max-width: 520px;
+      margin: 0;
+      color: var(--muted);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 650;
+      line-height: 1.65;
+    }
+
+    .services {
+      background: linear-gradient(180deg, #080a0b 0%, #101416 100%);
+    }
+
+    .service-grid,
+    .why-grid,
+    .contact-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .service-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .service-card,
+    .why-card,
+    .info-card,
+    .contact-form,
+    .featured-card,
+    .gallery-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+      box-shadow: 0 18px 56px rgba(0, 0, 0, 0.22);
+    }
+
+    .service-card {
+      min-height: 230px;
+      padding: 22px;
+      display: grid;
+      align-content: space-between;
+      overflow: hidden;
+      transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(182, 255, 0, 0.45);
+      background: linear-gradient(180deg, rgba(182, 255, 0, 0.13), rgba(255, 255, 255, 0.035));
+    }
+
+    .service-mark {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(182, 255, 0, 0.5);
+      border-radius: var(--radius);
+      color: var(--lime);
+      background: rgba(182, 255, 0, 0.08);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 950;
+    }
+
+    .service-card h3,
+    .why-card h3,
+    .contact-form h3,
+    .info-card h3 {
+      margin: 0;
+      text-transform: uppercase;
+      line-height: 0.95;
+      font-size: 1.55rem;
+    }
+
+    .service-card p,
+    .why-card p,
+    .info-card p,
+    .contact-form p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 650;
+      line-height: 1.45;
+    }
+
+    .featured {
+      background: #101416;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 18px;
+    }
+
+    .featured-card {
+      position: relative;
+      min-height: 420px;
+      overflow: hidden;
+      isolation: isolate;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 220ms ease, border-color 220ms ease;
+    }
+
+    .featured-card:first-child {
+      grid-row: span 2;
+      min-height: 640px;
+    }
+
+    .featured-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(225, 183, 90, 0.55);
+    }
+
+    .featured-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 380ms ease, filter 380ms ease;
+    }
+
+    .featured-card:hover img {
+      transform: scale(1.045);
+      filter: saturate(1.08);
+    }
+
+    .work-label {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      z-index: 2;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius);
+      background: rgba(8, 10, 11, 0.72);
+      backdrop-filter: blur(12px);
+    }
+
+    .work-label h3 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3vw, 2.65rem);
+      line-height: 0.88;
+      text-transform: uppercase;
+    }
+
+    .work-label span {
+      color: var(--lime);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .portfolio {
+      background: #080a0b;
+    }
+
+    .gallery-grid {
+      columns: 4 230px;
+      column-gap: 16px;
+    }
+
+    .gallery-card {
+      position: relative;
+      display: block;
+      width: 100%;
+      margin: 0 0 16px;
+      padding: 0;
+      overflow: hidden;
+      cursor: pointer;
+      break-inside: avoid;
+      border: 0;
+      color: var(--text);
+      text-align: left;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: auto;
+      transition: transform 330ms ease, filter 330ms ease;
+    }
+
+    .gallery-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 42%, rgba(8, 10, 11, 0.86) 100%);
+      opacity: 0.82;
+      transition: opacity 200ms ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.045);
+      filter: saturate(1.12) contrast(1.05);
+    }
+
+    .gallery-card:hover::after {
+      opacity: 1;
+    }
+
+    .gallery-meta {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .gallery-meta strong {
+      font-size: 1.25rem;
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .gallery-meta span {
+      padding: 7px 9px;
+      border: 1px solid rgba(182, 255, 0, 0.35);
+      border-radius: 999px;
+      color: var(--lime);
+      background: rgba(8, 10, 11, 0.62);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.68rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .about {
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(0, 168, 255, 0.08), transparent 38%),
+        #101416;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+      align-items: center;
+      gap: 42px;
+    }
+
+    .about-copy {
+      margin: 22px 0 0;
+      color: rgba(247, 247, 243, 0.86);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: clamp(1.08rem, 2vw, 1.28rem);
+      font-weight: 650;
+      line-height: 1.7;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--lime);
+      font-size: 2.2rem;
+      line-height: 0.9;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 850;
+      text-transform: uppercase;
+    }
+
+    .about-image {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .about-image img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    .why {
+      background: #080a0b;
+    }
+
+    .why-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .why-card {
+      min-height: 210px;
+      padding: 22px;
+      transition: transform 200ms ease, border-color 200ms ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0, 168, 255, 0.5);
+    }
+
+    .why-number {
+      display: block;
+      margin-bottom: 34px;
+      color: var(--gold);
+      font-size: 2.3rem;
+      line-height: 0.85;
+    }
+
+    .cta {
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(182, 255, 0, 0.16), rgba(0, 168, 255, 0.09)),
+        #111619;
+    }
+
+    .cta-inner {
+      width: min(var(--max), calc(100% - 32px));
+      min-height: 330px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .cta h2 {
+      max-width: 780px;
+      font-size: clamp(3.4rem, 8vw, 7.8rem);
+    }
+
+    .contact {
+      background: #101416;
+    }
+
+    .contact-grid {
+      grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1.14fr);
+      align-items: start;
+    }
+
+    .info-card,
+    .contact-form {
+      padding: 24px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .contact-list a,
+    .contact-list div {
+      display: grid;
+      grid-template-columns: 116px minmax(0, 1fr);
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-weight: 750;
+      line-height: 1.35;
+    }
+
+    .contact-list b {
+      color: var(--lime);
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .field-wide {
+      grid-column: 1 / -1;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--text);
+      background: rgba(8, 10, 11, 0.64);
+      padding: 12px 14px;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 650;
+    }
+
+    textarea {
+      min-height: 142px;
+      resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 650;
+    }
+
+    .site-footer {
+      padding: 42px 0;
+      border-top: 1px solid var(--line);
+      background: #070909;
+    }
+
+    .footer-wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-brand img {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--line);
+    }
+
+    .footer-brand strong {
+      display: block;
+      font-size: 1.7rem;
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .footer-brand span,
+    .footer-meta {
+      color: var(--muted);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.88rem;
+      font-weight: 650;
+      line-height: 1.5;
+    }
+
+    .footer-meta {
+      text-align: right;
+    }
+
+    .float-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 40;
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(182, 255, 0, 0.42);
+      border-radius: 50%;
+      color: #070909;
+      background: var(--lime);
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.38), 0 0 0 8px rgba(182, 255, 0, 0.1);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .float-whatsapp:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 22px 54px rgba(0, 0, 0, 0.42), 0 0 0 10px rgba(182, 255, 0, 0.14);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    .lightbox.active {
+      display: grid;
+    }
+
+    .lightbox-panel {
+      position: relative;
+      width: min(100%, 980px);
+      max-height: 92vh;
+      display: grid;
+      gap: 14px;
+    }
+
+    .lightbox img {
+      width: 100%;
+      max-height: calc(92vh - 70px);
+      object-fit: contain;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #0b0d0e;
+      box-shadow: var(--shadow);
+    }
+
+    .lightbox-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      color: var(--muted);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .lightbox-caption strong {
+      color: var(--text);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--text);
+      background: #101416;
+      cursor: pointer;
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 500ms ease, transform 500ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1020px) {
+      .main-nav,
+      .nav-cta {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .site-header.menu-open .main-nav {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 84px;
+        display: grid;
+        gap: 2px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: rgba(8, 10, 11, 0.96);
+        box-shadow: var(--shadow);
+      }
+
+      .site-header.menu-open .main-nav a {
+        padding: 13px 10px;
+      }
+
+      .site-header.menu-open .mobile-toggle span {
+        opacity: 0;
+      }
+
+      .site-header.menu-open .mobile-toggle::before {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .site-header.menu-open .mobile-toggle::after {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-proof {
+        max-width: 420px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .featured-grid,
+      .about-grid,
+      .contact-grid,
+      .cta-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-card:first-child,
+      .featured-card {
+        min-height: 420px;
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-wrap {
+        width: min(var(--max), calc(100% - 22px));
+      }
+
+      .brand img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .brand-text strong {
+        font-size: 1.18rem;
+      }
+
+      .brand-text span {
+        font-size: 0.62rem;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(180deg, rgba(8, 10, 11, 0.6), rgba(8, 10, 11, 0.94) 62%, #080a0b 100%),
+          linear-gradient(90deg, rgba(8, 10, 11, 0.76), rgba(8, 10, 11, 0.24));
+      }
+
+      .hero-media img {
+        object-position: center top;
+      }
+
+      .hero-inner {
+        width: min(var(--max), calc(100% - 22px));
+        padding: 300px 0 56px;
+        gap: 26px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.45rem, 18vw, 5.7rem);
+      }
+
+      .hero-actions,
+      .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      section {
+        padding: 68px 0;
+      }
+
+      .section-wrap,
+      .cta-inner,
+      .footer-wrap {
+        width: min(var(--max), calc(100% - 22px));
+      }
+
+      .section-head {
+        display: grid;
+      }
+
+      .service-grid,
+      .why-grid,
+      .form-grid,
+      .about-stats,
+      .footer-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card,
+      .why-card {
+        min-height: 176px;
+      }
+
+      .featured-grid {
+        gap: 14px;
+      }
+
+      .featured-card:first-child,
+      .featured-card {
+        min-height: 340px;
+      }
+
+      .work-label {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .gallery-grid {
+        columns: 1;
+      }
+
+      .contact-list a,
+      .contact-list div {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .cta-inner {
+        min-height: 280px;
+      }
+
+      .cta h2 {
+        font-size: clamp(3rem, 17vw, 5.3rem);
+      }
+
+      .footer-meta {
+        text-align: left;
+      }
+
+      .float-whatsapp {
+        width: 58px;
+        height: 58px;
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a href="#home" class="brand" aria-label="TG Graphics home">
+        <img src="assets/logo-main.jpeg" alt="TG Graphics logo" />
+        <span class="brand-text">
+          <strong>TG Graphics</strong>
+          <span>Make it trend</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="https://wa.me/27790288346?text=Hi%20TG%20Graphics,%20I%20would%20like%20to%20order%20a%20design.">WhatsApp</a>
+      <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-label="TG Graphics hero">
+      <div class="hero-media">
+        <img src="assets/2.jpeg" alt="TG Graphics cover artwork for Mbilu Iya Vhayha" />
+      </div>
+      <div class="hero-inner">
+        <div class="reveal">
+          <span class="eyebrow">Near Makhado / Louis Trichardt</span>
+          <h1>We Make Your <span class="accent">Brand Trend</span></h1>
+          <p>Posters, album covers, logos, and visuals that help your business or event stand out.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/27790288346?text=Hi%20TG%20Graphics,%20I%20would%20like%20to%20order%20a%20design.">Order on WhatsApp</a>
+            <a class="btn btn-ghost" href="#portfolio">View Portfolio</a>
+          </div>
+        </div>
+        <button class="hero-proof reveal js-lightbox" type="button" data-full="assets/5.jpeg" data-title="Cover Art" aria-label="Open featured TG Graphics artwork">
+          <img src="assets/5.jpeg" alt="TG Graphics Tiger Blesser cover artwork" />
+          <div>
+            <strong>Featured Visual</strong>
+            <span>Cover Art</span>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Services</span>
+            <h2 class="section-title">Designs That Move Fast</h2>
+          </div>
+          <p class="section-copy">From event posters to full visual identities, TG Graphics builds sharp work that looks ready for social media, print and promotion.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <span class="service-mark">PD</span>
+            <div>
+              <h3>Poster Design</h3>
+              <p>Bold flyers for events, churches, schools and local brands.</p>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-mark">LD</span>
+            <div>
+              <h3>Logo Design</h3>
+              <p>Memorable marks made to carry your name with confidence.</p>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-mark">TC</span>
+            <div>
+              <h3>Track Cover</h3>
+              <p>Single artwork that gives your song a professional launch.</p>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-mark">AC</span>
+            <div>
+              <h3>Album Cover</h3>
+              <p>High-impact cover visuals for artists and music campaigns.</p>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-mark">VA</span>
+            <div>
+              <h3>Video Advertising</h3>
+              <p>Promo visuals built to help your offer grab attention online.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" aria-label="Featured designs">
+      <div class="section-wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Featured Work</span>
+            <h2 class="section-title">Featured Designs</h2>
+          </div>
+          <p class="section-copy">A quick hit of the range: music covers, business promo graphics and event visuals with bold typography and polished composition.</p>
+        </div>
+        <div class="featured-grid">
+          <button class="featured-card reveal js-lightbox" type="button" data-full="assets/2.jpeg" data-title="Cover Art">
+            <img src="assets/2.jpeg" alt="Dark dramatic track cover design by TG Graphics" />
+            <span class="work-label"><h3>Cover Art</h3><span>Open</span></span>
+          </button>
+          <button class="featured-card reveal js-lightbox" type="button" data-full="assets/3.jpeg" data-title="Business Promo">
+            <img src="assets/3.jpeg" alt="Premium brick works business poster by TG Graphics" />
+            <span class="work-label"><h3>Business Promo</h3><span>Open</span></span>
+          </button>
+          <button class="featured-card reveal js-lightbox" type="button" data-full="assets/1.jpeg" data-title="Event Flyer">
+            <img src="assets/1.jpeg" alt="Church event flyer design by TG Graphics" />
+            <span class="work-label"><h3>Event Flyer</h3><span>Open</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="section-wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Portfolio</span>
+            <h2 class="section-title">Recent Work</h2>
+          </div>
+          <p class="section-copy">Tap any design to preview it full-size. Every piece below uses the real TG Graphics portfolio images provided for this build.</p>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-card reveal js-lightbox" type="button" data-full="assets/1.jpeg" data-title="Event Flyer">
+            <img src="assets/1.jpeg" alt="Unveiling service event flyer designed by TG Graphics" loading="lazy" />
+            <span class="gallery-meta"><strong>Event Flyer</strong><span>Poster</span></span>
+          </button>
+          <button class="gallery-card reveal js-lightbox" type="button" data-full="assets/2.jpeg" data-title="Track Cover">
+            <img src="assets/2.jpeg" alt="Mbilu Iya Vhayha track cover designed by TG Graphics" loading="lazy" />
+            <span class="gallery-meta"><strong>Track Cover</strong><span>Cover Art</span></span>
+          </button>
+          <button class="gallery-card reveal js-lightbox" type="button" data-full="assets/3.jpeg" data-title="Business Poster">
+            <img src="assets/3.jpeg" alt="Tshedza Brick Works promotional poster designed by TG Graphics" loading="lazy" />
+            <span class="gallery-meta"><strong>Business Poster</strong><span>Promo</span></span>
+          </button>
+          <button class="gallery-card reveal js-lightbox" type="button" data-full="assets/4.jpeg" data-title="Logo Design">
+            <img src="assets/4.jpeg" alt="Tecia Artful Bakery logo mockup designed by TG Graphics" loading="lazy" />
+            <span class="gallery-meta"><strong>Logo Design</strong><span>Branding</span></span>
+          </button>
+          <button class="gallery-card reveal js-lightbox" type="button" data-full="assets/5.jpeg" data-title="Single Cover">
+            <img src="assets/5.jpeg" alt="Tiger Blesser single cover designed by TG Graphics" loading="lazy" />
+            <span class="gallery-meta"><strong>Single Cover</strong><span>Cover Art</span></span>
+          </button>
+          <button class="gallery-card reveal js-lightbox" type="button" data-full="assets/6.jpeg" data-title="Church Logo">
+            <img src="assets/6.jpeg" alt="Eloyi Christian Church logo designed by TG Graphics" loading="lazy" />
+            <span class="gallery-meta"><strong>Church Logo</strong><span>Branding</span></span>
+          </button>
+          <button class="gallery-card reveal js-lightbox" type="button" data-full="assets/7.jpeg" data-title="Council Poster">
+            <img src="assets/7.jpeg" alt="Church council members poster designed by TG Graphics" loading="lazy" />
+            <span class="gallery-meta"><strong>Council Poster</strong><span>Event Flyer</span></span>
+          </button>
+          <button class="gallery-card reveal js-lightbox" type="button" data-full="assets/8.jpeg" data-title="Food Branding">
+            <img src="assets/8.jpeg" alt="Mama Nhlulo Beef Mince logo designed by TG Graphics" loading="lazy" />
+            <span class="gallery-meta"><strong>Food Branding</strong><span>Logo</span></span>
+          </button>
+          <button class="gallery-card reveal js-lightbox" type="button" data-full="assets/9.jpeg" data-title="Menu Design">
+            <img src="assets/9.jpeg" alt="Spholphol menu design by TG Graphics" loading="lazy" />
+            <span class="gallery-meta"><strong>Menu Design</strong><span>Promo Visual</span></span>
+          </button>
+          <button class="gallery-card reveal js-lightbox" type="button" data-full="assets/10.jpeg" data-title="School Admission Poster">
+            <img src="assets/10.jpeg" alt="LTT Murunwa School of Excellence admission poster designed by TG Graphics" loading="lazy" />
+            <span class="gallery-meta"><strong>School Poster</strong><span>Poster</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-wrap">
+        <div class="about-grid">
+          <div class="reveal">
+            <span class="eyebrow">About</span>
+            <h2 class="section-title">Built By Tiger Blesser</h2>
+            <p class="about-copy">TG Graphics is led by Tiger Blesser, a young and active creative based near Makhado, Louis Trichardt. We create bold, eye-catching visuals for artists, events, and businesses that want to stand out and make an impact.</p>
+            <div class="about-stats">
+              <div class="stat">
+                <strong>10+</strong>
+                <span>Portfolio pieces</span>
+              </div>
+              <div class="stat">
+                <strong>5</strong>
+                <span>Creative services</span>
+              </div>
+              <div class="stat">
+                <strong>48h</strong>
+                <span>Fast project energy</span>
+              </div>
+            </div>
+          </div>
+          <button class="about-image reveal js-lightbox" type="button" data-full="assets/7.jpeg" data-title="Event and Church Visuals" aria-label="Open TG Graphics church poster">
+            <img src="assets/7.jpeg" alt="TG Graphics church council poster" loading="lazy" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="section-wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Why Choose Us</span>
+            <h2 class="section-title">Creative Work With Punch</h2>
+          </div>
+          <p class="section-copy">TG Graphics is made for people who need visuals that feel alive, direct and ready to share.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card reveal">
+            <span class="why-number">01</span>
+            <h3>Fast Turnaround</h3>
+            <p>Quick response and energetic delivery for urgent promotions.</p>
+          </article>
+          <article class="why-card reveal">
+            <span class="why-number">02</span>
+            <h3>Affordable Creative Work</h3>
+            <p>Strong design value for artists, businesses and local events.</p>
+          </article>
+          <article class="why-card reveal">
+            <span class="why-number">03</span>
+            <h3>Bold Social Media Designs</h3>
+            <p>Visuals built to stop the scroll and sell the moment.</p>
+          </article>
+          <article class="why-card reveal">
+            <span class="why-number">04</span>
+            <h3>Custom-Made For Your Brand</h3>
+            <p>Every design is shaped around your message, audience and goal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-label="Order call to action">
+      <div class="cta-inner reveal">
+        <h2>Ready to make your business shine?</h2>
+        <a class="btn btn-primary" href="https://wa.me/27790288346?text=Hi%20TG%20Graphics,%20I%20would%20like%20to%20order%20a%20design.">Order on WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Contact</span>
+            <h2 class="section-title">Start Your Design</h2>
+          </div>
+          <p class="section-copy">Tell us what you need and the form will prepare a WhatsApp message so you can send the order fast.</p>
+        </div>
+        <div class="contact-grid">
+          <article class="info-card reveal">
+            <h3>TG Graphics</h3>
+            <p>To make your event trend and make your business shine.</p>
+            <div class="contact-list">
+              <a href="https://wa.me/27790288346?text=Hi%20TG%20Graphics,%20I%20would%20like%20to%20order%20a%20design."><b>WhatsApp</b><span>+27 79 028 8346</span></a>
+              <a href="tel:+27764344485"><b>Phone</b><span>+27 76 434 4485</span></a>
+              <a href="mailto:tiger@tggraphics.co.za"><b>Email</b><span>tiger@tggraphics.co.za</span></a>
+              <div><b>Facebook</b><span>Tiger Blesser</span></div>
+              <div><b>Location</b><span>Near Makhado / Louis Trichardt, South Africa</span></div>
+            </div>
+          </article>
+          <form class="contact-form reveal" id="orderForm">
+            <h3>Order A Design</h3>
+            <p>Send your details straight to WhatsApp.</p>
+            <div class="form-grid">
+              <label class="field">
+                Name
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </label>
+              <label class="field">
+                Phone
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+              </label>
+              <label class="field field-wide">
+                Service needed
+                <select id="service" name="service" required>
+                  <option value="">Choose a service</option>
+                  <option>Poster Design</option>
+                  <option>Logo Design</option>
+                  <option>Track Cover</option>
+                  <option>Album Cover</option>
+                  <option>Video Advertising</option>
+                </select>
+              </label>
+              <label class="field field-wide">
+                Message
+                <textarea id="message" name="message" placeholder="Tell us the event, business, music release, deadline or idea." required></textarea>
+              </label>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send on WhatsApp</button>
+              <span>No payment happens on this website.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <img src="assets/logo-main.jpeg" alt="TG Graphics logo" />
+        <div>
+          <strong>TG Graphics</strong>
+          <span>Posters, logos, cover art and video advertising by Tiger Blesser.</span>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <div>WhatsApp: +27 79 028 8346</div>
+        <div>Email: tiger@tggraphics.co.za</div>
+        <div>&copy; <span id="year"></span> TG Graphics. All rights reserved.</div>
+        <p><a class="btn btn-primary" href="https://wa.me/27790288346?text=Hi%20TG%20Graphics,%20I%20would%20like%20to%20order%20a%20design.">WhatsApp</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="float-whatsapp" href="https://wa.me/27790288346?text=Hi%20TG%20Graphics,%20I%20would%20like%20to%20order%20a%20design." aria-label="Order on WhatsApp">WA</a>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Portfolio preview">
+    <div class="lightbox-panel">
+      <button class="lightbox-close" type="button" aria-label="Close preview">&times;</button>
+      <img id="lightboxImage" src="assets/1.jpeg" alt="" />
+      <div class="lightbox-caption">
+        <strong id="lightboxTitle">Portfolio preview</strong>
+        <span>Press Esc to close</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const whatsAppBase = "https://wa.me/27790288346?text=";
+    const header = document.querySelector(".site-header");
+    const toggle = document.querySelector(".mobile-toggle");
+    const navLinks = document.querySelectorAll(".main-nav a");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxTitle = document.getElementById("lightboxTitle");
+    const closeLightbox = document.querySelector(".lightbox-close");
+    const revealItems = document.querySelectorAll(".reveal");
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    toggle.addEventListener("click", () => {
+      const isOpen = header.classList.toggle("menu-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        header.classList.remove("menu-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation");
+      });
+    });
+
+    document.querySelectorAll(".js-lightbox").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const full = trigger.dataset.full;
+        const title = trigger.dataset.title || "TG Graphics design";
+        lightboxImage.src = full;
+        lightboxImage.alt = title + " by TG Graphics";
+        lightboxTitle.textContent = title;
+        lightbox.classList.add("active");
+        closeLightbox.focus();
+      });
+    });
+
+    function hideLightbox() {
+      lightbox.classList.remove("active");
+    }
+
+    closeLightbox.addEventListener("click", hideLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        hideLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        hideLightbox();
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    document.getElementById("orderForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const service = document.getElementById("service").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const text = [
+        "Hi TG Graphics, I would like to order a design.",
+        "",
+        "Name: " + name,
+        "Phone: " + phone,
+        "Service needed: " + service,
+        "Message: " + message
+      ].join("\n");
+
+      window.open(whatsAppBase + encodeURIComponent(text), "_blank", "noopener,noreferrer");
+    });
+  </script>
+</body>
+</html>
